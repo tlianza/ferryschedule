@@ -13,16 +13,20 @@ class TimetableSelector extends Component {
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
-        console.log(props.timetables[0]);
         this.state = {
             timetable: props.timetables[0]
         };
+        console.log("TIMETABLE SELECTOR");
+        console.log(this.state.timetable);
     }
 
     handleChange(event) {
         console.log("A change was seen");
         console.log(event.target.value);
-        this.setState({timetable: this.props.timetables.filter(t=>t.name=event.target.value)});
+        const newTimetable = this.props.timetables.filter(t=>t.name===event.target.value);
+        this.setState((state, props) => ({
+            timetable: newTimetable[0]
+        }));
     }
 
     render() {
