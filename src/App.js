@@ -32,14 +32,15 @@ class TimetableSelector extends Component {
 
     render() {
         return (
+            <div class="container">
             <form>
                 <select onChange={this.handleChange.bind(this)}>
                     {this.props.timetables.map((t,i)=><option key={i} value={t.name}>{t.name}</option>)}
                 </select>
-                <table>
+                <table class="table table-sm">
                     <thead>
                         <tr>
-                            {this.state.timetable.friendlyColumns.map((r,c)=><th key={c}>{r}</th>)}
+                            {this.state.timetable.friendlyColumns.map((r,c)=><th key={c} scope="col">{r}</th>)}
                         </tr>
                     </thead>
                     <tbody>
@@ -47,6 +48,7 @@ class TimetableSelector extends Component {
                     </tbody>
                 </table>
             </form>
+            </div>
         );
     }
 }
@@ -103,8 +105,6 @@ class App extends Component {
                 this.parseTimetable(this.timetableForName(this.northboundName()), ["Departs Ferry Bldg", "Arrives Larkspur"], "Northbound")],
         };
 
-        console.log(timetable.Content.TimetableFrame);
-        console.log(this.state);
     }
 
   render() {
