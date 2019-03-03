@@ -21,7 +21,7 @@ pipelines:
         name: Deploy
         deployment: production
         script:
-          - pipe: atlassian/sftp-deploy:0.3.1
+          - pipe: atlassian/scp-deploy:0.3.1
             variables:
               USER: 'ferrydeploy'
               SERVER: 'ssh.lianza.org'
