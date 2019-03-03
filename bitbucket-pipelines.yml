@@ -8,10 +8,25 @@ image: node:11.2.0
 pipelines:
   default:
     - step:
+        name: Build and Test
         caches:
           - node
         script: # Modify the commands below to build your repository.
           - npm install
           - npm test
           - npm run build
+    - step:
+        name: Deploy
+        deployment: production
+        script:
+          - pipe: atlassian/sftp-deploy:0.3.1
+            variables:
+              USER: 'ferrydeploy'
+              SERVER: 'ssh.lianza.org'
+              REMOTE_PATH: '/home/tlianza/larkspurferry.cf/'
+              LOCAL_PATH: 'build/'
+              # SSH_KEY: '<string>' # Optional.
+              # EXTRA_ARGS: '<string>' # Optional.
+              # DEBUG: '<boolean>' # Optional.
+
 
