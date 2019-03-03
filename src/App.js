@@ -34,7 +34,7 @@ class TimetableSelector extends Component {
         return (
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <a className="navbar-brand" href="#">Larkspur Ferry</a>
+                    <a className="navbar-brand" href="/">Larkspur Ferry</a>
                     <form className="form-inline my-2 my-lg-0">
                         <select onChange={this.handleChange.bind(this)}>
                             {this.props.timetables.map((t,i)=><option key={i} value={t.name}>{t.name}</option>)}
