@@ -3,10 +3,11 @@ import './App.css';
 import timetable from './timetable.json';
 
 class Timetable {
-    constructor(name, friendlyColumns, stops) {
+    constructor(name, friendlyColumns, stops, validUntil) {
         this.name = name;
         this.friendlyColumns = friendlyColumns;
         this.stops = stops;
+        this.validUntil = validUntil;
     }
 }
 
@@ -17,13 +18,9 @@ class TimetableSelector extends Component {
         this.state = {
             timetable: props.timetables[0]
         };
-        console.log("TIMETABLE SELECTOR");
-        console.log(this.state.timetable);
     }
 
     handleChange(event) {
-        console.log("A change was seen");
-        console.log(event.target.value);
         const newTimetable = this.props.timetables.filter(t=>t.name===event.target.value);
         this.setState((state, props) => ({
             timetable: newTimetable[0]
@@ -52,6 +49,12 @@ class TimetableSelector extends Component {
                         <TimetableList timetable={this.state.timetable}/>
                     </tbody>
                 </table>
+
+                <p>
+                    See <a href="http://goldengateferry.org/schedules/Larkspur.php">Full Schedule</a><br />
+                    <small>Schedule valid until: {this.state.timetable.validUntil}&nbsp;</small>
+                    <small>Data courtesy <a href="https://511.org/">511.org</a></small>
+                </p>
 
             </div>
         );
@@ -99,7 +102,7 @@ class App extends Component {
     // is a route, and each column is a stop on that route. The values are the times (arrival & departure,
     // which may be the same).
     parseTimetable(timetableFrame, friendlyColumns, friendlyName) {
-        return new Timetable(friendlyName, friendlyColumns, timetableFrame[0].vehicleJourneys.ServiceJourney.map(journey=>journey.calls.Call));
+        return new Timetable(friendlyName, friendlyColumns, timetableFrame[0].vehicleJourneys.ServiceJourney.map(journey=>journey.calls.Call), timetableFrame[0].frameValidityConditions.AvailabilityCondition.ToDate);
     }
 
     constructor(props) {
