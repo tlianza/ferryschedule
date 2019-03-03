@@ -47,21 +47,29 @@ class TimetableSelector extends Component {
         return `LF:S :${this.getDay()}`;
     }
 
+    //Used for when you want special, time-aware treatment for when someone is looking at today's schedule
+    isToday(value) {
+        return (value === `LF:S :${this.getDay()}` || value === `LF:N :${this.getDay()}`);
+    }
+
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
 
         this.state = {
             timetable: props.timetables.filter(t=>t.name===this.getDefaultTimetableName())[0],
-            value: this.getDefaultTimetableName()
+            value: this.getDefaultTimetableName(),
+            isToday: this.isToday(this.getDefaultTimetableName())
         };
     }
 
     handleChange(event) {
         const newTimetable = this.props.timetables.filter(t=>t.name===event.target.value)[0];
+        const isToday = this.isToday(event.target.value);
         this.setState((state, props) => ({
             timetable: newTimetable,
-            value: props.value
+            value: props.value,
+            isToday: isToday
         }));
     }
 
@@ -84,7 +92,7 @@ class TimetableSelector extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <TimetableList timetable={this.state.timetable}/>
+                        <TimetableList timetable={this.state.timetable} highlightNow={this.state.isToday}/>
                     </tbody>
                 </table>
 
@@ -102,14 +110,31 @@ class TimetableSelector extends Component {
 class TimetableList extends Component {
     friendlyTime(uglyTime) {
         const parts = uglyTime.split(':');
-        return `${parts[0]}:${parts[1]}`;
+        const h24 = parts[0];
+        const ampm = h24 > 11 ? 'p' : 'a';
+        const h = h24 > 12 ? h24-12 : h24;
+        return `${h}:${parts[1]}${ampm}`;
+    }
+
+    className(uglyTime) {
+        if (!this.props.highlightNow) {
+            return '';
+        }
+        const now = new Date();
+        const parts = uglyTime.split(':');
+        const h = parseInt(parts[0]);
+        const m = parseInt(parts[1]);
+        if (now.getHours() > h || (now.getHours() === h && now.getMinutes() > m)) {
+            return 'text-muted'
+        }
+        return '';
     }
 
     render() {
         return (
             this.props.timetable.stops.map((s,i)=>
                 <tr key={i}>
-                    {s.map((r,c)=><td key={c}>{this.friendlyTime(r.Arrival.Time)}</td>)}
+                    {s.map((r,c)=><td key={c} className={this.className(r.Arrival.Time)}>{this.friendlyTime(r.Arrival.Time)}</td>)}
                 </tr>
             )
         )
