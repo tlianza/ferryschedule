@@ -32,12 +32,17 @@ class TimetableSelector extends Component {
 
     render() {
         return (
-            <div class="container">
-            <form>
-                <select onChange={this.handleChange.bind(this)}>
-                    {this.props.timetables.map((t,i)=><option key={i} value={t.name}>{t.name}</option>)}
-                </select>
-                <table class="table table-sm">
+            <div className="container">
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                    <a className="navbar-brand" href="#">Larkspur Ferry</a>
+                    <form className="form-inline my-2 my-lg-0">
+                        <select onChange={this.handleChange.bind(this)}>
+                            {this.props.timetables.map((t,i)=><option key={i} value={t.name}>{t.name}</option>)}
+                        </select>
+                    </form>
+                </nav>
+
+                <table className="table table-sm">
                     <thead>
                         <tr>
                             {this.state.timetable.friendlyColumns.map((r,c)=><th key={c} scope="col">{r}</th>)}
@@ -47,7 +52,7 @@ class TimetableSelector extends Component {
                         <TimetableList timetable={this.state.timetable}/>
                     </tbody>
                 </table>
-            </form>
+
             </div>
         );
     }
