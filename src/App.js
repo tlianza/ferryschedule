@@ -100,11 +100,16 @@ class TimetableSelector extends Component {
 }
 
 class TimetableList extends Component {
+    friendlyTime(uglyTime) {
+        const parts = uglyTime.split(':');
+        return `${parts[0]}:${parts[1]}`;
+    }
+
     render() {
         return (
             this.props.timetable.stops.map((s,i)=>
                 <tr key={i}>
-                    {s.map((r,c)=><td key={c}>{r.Arrival.Time}</td>)}
+                    {s.map((r,c)=><td key={c}>{this.friendlyTime(r.Arrival.Time)}</td>)}
                 </tr>
             )
         )
