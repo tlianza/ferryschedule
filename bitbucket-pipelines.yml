@@ -15,6 +15,8 @@ pipelines:
           - npm install
           - npm test
           - npm run build
+        artifacts:
+          - build/**
     - step:
         name: Deploy
         deployment: production
@@ -24,7 +26,7 @@ pipelines:
               USER: 'ferrydeploy'
               SERVER: 'ssh.lianza.org'
               REMOTE_PATH: 'larkspurferry.cf'
-              LOCAL_PATH: '*'
+              LOCAL_PATH: 'build'
               # SSH_KEY: '<string>' # Optional.
               # EXTRA_ARGS: '<string>' # Optional.
               # DEBUG: '<boolean>' # Optional.
