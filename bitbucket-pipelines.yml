@@ -23,7 +23,7 @@ pipelines:
             variables:
               USER: 'ferrydeploy'
               SERVER: 'ssh.lianza.org'
-              REMOTE_PATH: '~/larkspurferry.cf'
+              REMOTE_PATH: 'larkspurferry.cf'
               LOCAL_PATH: 'build/'
               # SSH_KEY: '<string>' # Optional.
               # EXTRA_ARGS: '<string>' # Optional.
