@@ -108,6 +108,7 @@ class TimetableSelector extends Component {
 }
 
 class TimetableList extends Component {
+
     friendlyTime(uglyTime) {
         const parts = uglyTime.split(':');
         const h24 = parts[0];
@@ -116,17 +117,29 @@ class TimetableList extends Component {
         return `${h}:${parts[1]}${ampm}`;
     }
 
-    className(uglyTime) {
+    minutesOfDay(uglyTime) {
+        const parts = uglyTime.split(':');
+        const h = parseInt(parts[0]);
+        const m = parseInt(parts[1]);
+        return (60*h)+m;
+    }
+
+    className(uglyTime, column) {
         if (!this.props.highlightNow) {
             return '';
         }
         const now = new Date();
-        const parts = uglyTime.split(':');
-        const h = parseInt(parts[0]);
-        const m = parseInt(parts[1]);
-        if (now.getHours() > h || (now.getHours() === h && now.getMinutes() > m)) {
+        const nowmins = (60*now.getHours())+now.getMinutes();
+        const allmins = this.minutesOfDay(uglyTime);
+
+        if (nowmins > allmins) {
             return 'text-muted'
         }
+
+        if (column === 0 && allmins-nowmins < 60) {
+            return 'text-primary';
+        }
+
         return '';
     }
 
@@ -134,7 +147,7 @@ class TimetableList extends Component {
         return (
             this.props.timetable.stops.map((s,i)=>
                 <tr key={i}>
-                    {s.map((r,c)=><td key={c} className={this.className(r.Arrival.Time)}>{this.friendlyTime(r.Arrival.Time)}</td>)}
+                    {s.map((r,c)=><td key={c} className={this.className(r.Arrival.Time, c)}>{this.friendlyTime(r.Arrival.Time)}</td>)}
                 </tr>
             )
         )
