@@ -25,17 +25,22 @@ class Timetable {
         return (this.direction === 'N') ? "Northbound" : "Southbound";
     }
 
+    friendlySchedulename() {
+        return (this.schedule) === 'Saturday' ? 'Weekend & Holiday' : this.schedule;
+    }
+
     friendlyName() {
-        return `${this.schedule}: ${this.friendlyDirection()}`
+        return `${this.friendlySchedulename()}: ${this.friendlyDirection()}`
     }
 }
 
 class TimetableSelector extends Component {
-    getDay() {
+
+    // Returns the name that the timetable dataset will use to represent 'today'
+    static getTimetableNameForToday() {
         const day = new Date().getDay();
         switch(day){
             case 0:
-                return 'Sunday';
             case 6:
                 return 'Saturday';
             default:
@@ -43,13 +48,13 @@ class TimetableSelector extends Component {
         }
     }
 
-    getDefaultTimetableName() {
-        return `LF:S :${this.getDay()}`;
+    static getDefaultTimetableName() {
+        return `LF:S :${TimetableSelector.getTimetableNameForToday()}`;
     }
 
     //Used for when you want special, time-aware treatment for when someone is looking at today's schedule
-    isToday(value) {
-        return (value === `LF:S :${this.getDay()}` || value === `LF:N :${this.getDay()}`);
+    static isToday(value) {
+        return (value === `LF:S :${TimetableSelector.getTimetableNameForToday()}` || value === `LF:N :${TimetableSelector.getTimetableNameForToday()}`);
     }
 
     constructor(props) {
@@ -57,15 +62,15 @@ class TimetableSelector extends Component {
         this.handleChange = this.handleChange.bind(this);
 
         this.state = {
-            timetable: props.timetables.filter(t=>t.name===this.getDefaultTimetableName())[0],
-            value: this.getDefaultTimetableName(),
-            isToday: this.isToday(this.getDefaultTimetableName())
+            timetable: props.timetables.filter(t=>t.name===TimetableSelector.getDefaultTimetableName())[0],
+            value: TimetableSelector.getDefaultTimetableName(),
+            isToday: TimetableSelector.isToday(TimetableSelector.getDefaultTimetableName())
         };
     }
 
     handleChange(event) {
         const newTimetable = this.props.timetables.filter(t=>t.name===event.target.value)[0];
-        const isToday = this.isToday(event.target.value);
+        const isToday = TimetableSelector.isToday(event.target.value);
         this.setState((state, props) => ({
             timetable: newTimetable,
             value: props.value,
@@ -109,7 +114,7 @@ class TimetableSelector extends Component {
 
 class TimetableList extends Component {
 
-    friendlyTime(uglyTime) {
+    static friendlyTime(uglyTime) {
         const parts = uglyTime.split(':');
         const h24 = parts[0];
         const ampm = h24 > 11 ? 'p' : 'a';
@@ -117,7 +122,7 @@ class TimetableList extends Component {
         return `${h}:${parts[1]}${ampm}`;
     }
 
-    minutesOfDay(uglyTime) {
+    static minutesOfDay(uglyTime) {
         const parts = uglyTime.split(':');
         const h = parseInt(parts[0]);
         const m = parseInt(parts[1]);
@@ -130,10 +135,14 @@ class TimetableList extends Component {
         }
         const now = new Date();
         const nowmins = (60*now.getHours())+now.getMinutes();
-        const allmins = this.minutesOfDay(uglyTime);
+        const allmins = TimetableList.minutesOfDay(uglyTime);
 
         if (nowmins > allmins) {
             return 'text-muted'
+        }
+
+        if (column === 0 && allmins-nowmins < 15) {
+            return 'text-danger';
         }
 
         if (column === 0 && allmins-nowmins < 60) {
@@ -147,7 +156,7 @@ class TimetableList extends Component {
         return (
             this.props.timetable.stops.map((s,i)=>
                 <tr key={i}>
-                    {s.map((r,c)=><td key={c} className={this.className(r.Arrival.Time, c)}>{this.friendlyTime(r.Arrival.Time)}</td>)}
+                    {s.map((r,c)=><td key={c} className={this.className(r.Arrival.Time, c)}>{TimetableList.friendlyTime(r.Arrival.Time)}</td>)}
                 </tr>
             )
         )
@@ -163,7 +172,11 @@ class App extends Component {
     // Given a timetable object, returns a 2 dimensional array where each row
     // is a route, and each column is a stop on that route. The values are the times (arrival & departure,
     // which may be the same).
-    parseTimetable(name, timetableFrame) {
+    static parseTimetable(name, timetableFrame) {
+        if(timetableFrame.length === 0) {
+            console.error(`Got empty timetable for ${name}`);
+            return new Timetable(`${name} (Empty!!)`);
+        }
         return new Timetable(name, timetableFrame[0].vehicleJourneys.ServiceJourney.map(journey=>journey.calls.Call), timetableFrame[0].frameValidityConditions.AvailabilityCondition.ToDate);
     }
 
@@ -171,10 +184,10 @@ class App extends Component {
         super(props);
 
         //This is coded as a constant so we ensure the dropdown order is constant
-        const TIMETABLES_SHOWN   = ["LF:S :Weekday", "LF:N :Weekday", "LF:S :Saturday", "LF:N :Saturday", "LF:S :Sunday", "LF:N :Sunday"];
+        const TIMETABLES_SHOWN   = ["LF:S :Weekday", "LF:N :Weekday", "LF:S :Saturday", "LF:N :Saturday"];
 
         this.state = {
-            timetables: TIMETABLES_SHOWN.map(timetable=>this.parseTimetable(timetable, this.timetableForName(timetable)))
+            timetables: TIMETABLES_SHOWN.map(timetable=>App.parseTimetable(timetable, this.timetableForName(timetable)))
         };
     }
 
