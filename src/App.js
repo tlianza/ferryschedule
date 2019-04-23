@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import timetable from './timetable.json';
+import distance from './distance.js';
+
+const NORTHBOUND_COLUMNS = ["Departs Ferry Bldg", "Arrives Larkspur"];
+const SOUTHBOUND_COLUMNS = ["Departs Larkspur", "Arrives Ferry Bldg"];
+const NORTHBOUND_DEFAULT_GEO = [37.7955, -122.3937]; //Co-ordinates of sf ferry bldg
+const SOUTHBOUND_DEFAULT_GEO = [37.946499, -122.509532]; //Co-ordinates of larkspur ferry
 
 class Timetable {
     constructor(name, stops, validUntil) {
@@ -15,9 +21,6 @@ class Timetable {
     }
 
     friendlyColumns() {
-        const NORTHBOUND_COLUMNS = ["Departs Ferry Bldg", "Arrives Larkspur"];
-        const SOUTHBOUND_COLUMNS = ["Departs Larkspur", "Arrives Ferry Bldg"];
-
         return (this.direction === 'N') ? NORTHBOUND_COLUMNS : SOUTHBOUND_COLUMNS;
     }
 
@@ -48,8 +51,8 @@ class TimetableSelector extends Component {
         }
     }
 
-    static getDefaultTimetableName() {
-        return `LF:S :${TimetableSelector.getTimetableNameForToday()}`;
+    static getDefaultTimetableName(dir='S') {
+        return `LF:${dir} :${TimetableSelector.getTimetableNameForToday()}`;
     }
 
     //Used for when you want special, time-aware treatment for when someone is looking at today's schedule
@@ -61,6 +64,28 @@ class TimetableSelector extends Component {
         super(props);
         this.handleChange = this.handleChange.bind(this);
 
+        if (navigator.geolocation) {
+            console.log("Fetching geolocation...");
+            const self = this;
+            navigator.geolocation.getCurrentPosition(function(position) {
+                console.log("got position", position.coords.latitude, position.coords.longitude);
+                const nDistance = distance(position.coords.latitude, position.coords.longitude, NORTHBOUND_DEFAULT_GEO[0], NORTHBOUND_DEFAULT_GEO[1], 'M');
+                const sDistance = distance(position.coords.latitude, position.coords.longitude, SOUTHBOUND_DEFAULT_GEO[0], SOUTHBOUND_DEFAULT_GEO[1], 'M');
+                console.log(nDistance, sDistance);
+                //If you're closer to the northbound default, change to northbound default
+                if (nDistance < sDistance) {
+                    var newDefaultTimeTable = TimetableSelector.getDefaultTimetableName('N');
+                    console.log("Triggering change event: "+newDefaultTimeTable);
+                    document.getElementById('timetableSelector').value = newDefaultTimeTable;
+                    self.changeTimeTable(newDefaultTimeTable);
+                } else  {
+                    console.log("Not changing default.")
+                }
+            });
+        } else {
+            console.warn("Geolocation is not supported by this browser.");
+        }
+
         this.state = {
             timetable: props.timetables.filter(t=>t.name===TimetableSelector.getDefaultTimetableName())[0],
             value: TimetableSelector.getDefaultTimetableName(),
@@ -69,8 +94,12 @@ class TimetableSelector extends Component {
     }
 
     handleChange(event) {
-        const newTimetable = this.props.timetables.filter(t=>t.name===event.target.value)[0];
-        const isToday = TimetableSelector.isToday(event.target.value);
+        this.changeTimeTable(event.target.value);
+    }
+
+    changeTimeTable(targetTimetable) {
+        const newTimetable = this.props.timetables.filter(t=>t.name===targetTimetable)[0];
+        const isToday = TimetableSelector.isToday(targetTimetable);
         this.setState((state, props) => ({
             timetable: newTimetable,
             value: props.value,
@@ -84,7 +113,7 @@ class TimetableSelector extends Component {
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <a className="navbar-brand" href="/">Larkspur Ferry</a>
                     <form className="form-inline my-2 my-lg-0">
-                        <select onChange={this.handleChange.bind(this)} value={this.state.value}>
+                        <select id="timetableSelector" onChange={this.handleChange.bind(this)} value={this.state.value}>
                             {this.props.timetables.map((t,i)=><option key={i} value={t.name}>{t.friendlyName()}</option>)}
                         </select>
                     </form>
