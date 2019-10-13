@@ -1,6 +1,7 @@
 # Ferry Schedule
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It's used 
+to power https://larkspur.ferryschedule.mobi/
 
 ## Available Scripts
 
