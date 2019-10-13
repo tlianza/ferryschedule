@@ -33,6 +33,15 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `yarn run deploy`
 Deploy the built, static assets to github
 
+## Refreshing Data
+This is done outside the scope of this codebase, but it's just:
+
+```
+wget "https://api.511.org/transit/timetable?api_key=YOUR_API_KEY_HERE&format=json&operator_id=GF&line_id=LF" -O timetable.json
+```
+
+from the `src/` folder
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
