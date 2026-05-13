@@ -25,9 +25,9 @@ body {
 
 .layout {
   width: min(900px, 100% - 1.5rem);
-  margin: 1.25rem auto 2rem;
+  margin: 0.75rem auto 1.25rem;
   display: grid;
-  gap: 1rem;
+  gap: 0.6rem;
 }
 
 .hero h1,
@@ -37,45 +37,32 @@ h2 {
 }
 
 .hero {
-  padding: 0.75rem 0.25rem;
+  padding: 0.15rem 0.2rem;
   animation: rise 500ms ease-out;
 }
 
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.72rem;
-  margin: 0;
-  color: var(--muted);
-}
-
 h1 {
-  font-size: clamp(1.8rem, 4.5vw, 3rem);
-  line-height: 1.08;
-}
-
-.subhead {
-  margin: 0.4rem 0 0;
-  color: var(--muted);
+  font-size: clamp(1.35rem, 4.2vw, 2.2rem);
+  line-height: 1.02;
 }
 
 .panel {
   background: var(--panel);
   border: 1px solid #ffffff;
   box-shadow: 0 10px 30px #10301c1c;
-  border-radius: 14px;
-  padding: 0.9rem;
+  border-radius: 12px;
+  padding: 0.6rem 0.7rem;
   backdrop-filter: blur(4px);
   animation: rise 600ms ease-out;
 }
 
 .controls {
   display: grid;
-  gap: 0.45rem;
+  gap: 0.3rem;
 }
 
 label {
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: var(--muted);
 }
@@ -83,9 +70,9 @@ label {
 select {
   width: 100%;
   appearance: none;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid var(--line);
-  padding: 0.7rem;
+  padding: 0.48rem 0.55rem;
   font: inherit;
   color: var(--ink);
   background: #fff;
@@ -94,7 +81,8 @@ select {
 .status {
   margin: 0;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.75rem;
+  line-height: 1.2;
 }
 
 .table-wrap {
@@ -109,12 +97,12 @@ table {
 th,
 td {
   text-align: left;
-  padding: 0.7rem 0.45rem;
+  padding: 0.44rem 0.38rem;
   border-bottom: 1px solid var(--line);
 }
 
 th {
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -140,7 +128,7 @@ td.now {
 
 .meta {
   color: var(--muted);
-  font-size: 0.87rem;
+  font-size: 0.75rem;
   padding: 0 0.25rem;
 }
 
@@ -165,16 +153,16 @@ a {
 
 @media (min-width: 760px) {
   .layout {
-    margin-top: 2rem;
-    gap: 1.25rem;
+    margin-top: 1.5rem;
+    gap: 0.9rem;
   }
 
   .panel {
-    padding: 1.1rem 1.2rem;
+    padding: 0.95rem 1rem;
   }
 
   th,
   td {
-    padding: 0.8rem 0.55rem;
+    padding: 0.65rem 0.48rem;
   }
 }

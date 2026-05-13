@@ -32,6 +32,19 @@ npm run deploy
 
 You will need to be authenticated with Cloudflare in your terminal (`npx wrangler login`).
 
+## Analytics
+
+Google Universal Analytics (`UA-*`) is sunset, so use a GA4 measurement ID (`G-*`).
+
+1. Open `static/index.html`.
+2. Set the tag in the head section:
+
+```html
+<meta name="google-analytics-id" content="G-XXXXXXXXXX" />
+```
+
+If the value is empty, analytics is disabled.
+
 ## Data Refresh
 
 1. Copy `.env.example` to `.env` and set your key:

@@ -205,9 +205,7 @@ async function boot() {
       validUntil.textContent = `Schedule valid until ${active.validUntil.toLocaleDateString()}.`;
       const highlightNow = isTodaySchedule(active.name, lineId, todaySchedule);
       renderRows(active, rows, highlightNow);
-      status.textContent = highlightNow
-        ? "Highlighted departures are based on current time."
-        : "Times shown without live highlighting for non-today schedules.";
+      status.textContent = "";
     };
 
     select.addEventListener("change", paint);

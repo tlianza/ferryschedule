@@ -8,6 +8,7 @@
       name="description"
       content="Mobile-friendly ferry schedule for Larkspur and San Francisco Ferry Building."
     />
+    <meta name="google-analytics-id" content="" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,13 +16,32 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
+    <script>
+      (function initAnalytics() {
+        const measurementId = document
+          .querySelector('meta[name="google-analytics-id"]')
+          ?.content?.trim();
+
+        if (!measurementId) return;
+
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag() {
+          window.dataLayer.push(arguments);
+        };
+        window.gtag("js", new Date());
+        window.gtag("config", measurementId);
+      })();
+    </script>
   </head>
   <body>
     <main class="layout">
       <header class="hero">
-        <p class="eyebrow">Golden Gate Ferry</p>
         <h1>Larkspur Schedule</h1>
-        <p class="subhead">Fast glance at the next departure, tuned for your phone.</p>
       </header>
 
       <section class="panel controls">
