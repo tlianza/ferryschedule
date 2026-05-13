@@ -1,0 +1,180 @@
+:root {
+  --bg-top: #f3f7f2;
+  --bg-bottom: #d5e6dc;
+  --ink: #132217;
+  --muted: #506253;
+  --panel: #fffffff2;
+  --accent: #166a4a;
+  --soon: #8d3d13;
+  --now: #9c2a13;
+  --line: #d6ddd8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Manrope, "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 10% 10%, #f7fff7 0, #f7fff700 30%),
+    linear-gradient(170deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+}
+
+.layout {
+  width: min(900px, 100% - 1.5rem);
+  margin: 1.25rem auto 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.hero h1,
+h2 {
+  font-family: Fraunces, Georgia, serif;
+  margin: 0;
+}
+
+.hero {
+  padding: 0.75rem 0.25rem;
+  animation: rise 500ms ease-out;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  margin: 0;
+  color: var(--muted);
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  line-height: 1.08;
+}
+
+.subhead {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid #ffffff;
+  box-shadow: 0 10px 30px #10301c1c;
+  border-radius: 14px;
+  padding: 0.9rem;
+  backdrop-filter: blur(4px);
+  animation: rise 600ms ease-out;
+}
+
+.controls {
+  display: grid;
+  gap: 0.45rem;
+}
+
+label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+select {
+  width: 100%;
+  appearance: none;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  padding: 0.7rem;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+}
+
+.status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.table-wrap {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.7rem 0.45rem;
+  border-bottom: 1px solid var(--line);
+}
+
+th {
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+td.past {
+  color: #8a958d;
+}
+
+td.soon {
+  color: var(--soon);
+  font-weight: 700;
+}
+
+td.now {
+  color: var(--now);
+  font-weight: 700;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.87rem;
+  padding: 0 0.25rem;
+}
+
+.meta p {
+  margin: 0.2rem 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 760px) {
+  .layout {
+    margin-top: 2rem;
+    gap: 1.25rem;
+  }
+
+  .panel {
+    padding: 1.1rem 1.2rem;
+  }
+
+  th,
+  td {
+    padding: 0.8rem 0.55rem;
+  }
+}
