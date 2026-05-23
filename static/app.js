@@ -112,7 +112,7 @@ function rowClass(hhmm, nowMins) {
 }
 
 async function loadTimetables() {
-  const response = await fetch("/data/timetable.json", { cache: "no-store" });
+  const response = await fetch("/data/timetable.json");
   const rawText = await response.text();
   const normalized = rawText.replace(/^\uFEFF/, "");
   const data = JSON.parse(normalized);
