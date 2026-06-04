@@ -1,1 +1,2585 @@
-{"Content":{"ServiceFrame":{"id":"SF","routes":{"Route":[{"id":"3344620","Name":"LSSF:N :Weekday","LineRef":{"ref":"LSSF"},"DirectionRef":{"ref":"N "},"pointsInSequence":{"PointOnRoute":[{"id":"3344620:1","PointRef":{"ref":"43000","type":"ScheduledStopPointRefStructure"}},{"id":"3344620:2","PointRef":{"ref":"43004","type":"ScheduledStopPointRefStructure"}}]}},{"id":"3344621","Name":"LSSF:N :Weekend","LineRef":{"ref":"LSSF"},"DirectionRef":{"ref":"N "},"pointsInSequence":{"PointOnRoute":[{"id":"3344621:1","PointRef":{"ref":"43000","type":"ScheduledStopPointRefStructure"}},{"id":"3344621:2","PointRef":{"ref":"43004","type":"ScheduledStopPointRefStructure"}}]}},{"id":"3344622","Name":"LSSF:S :Weekday","LineRef":{"ref":"LSSF"},"DirectionRef":{"ref":"S "},"pointsInSequence":{"PointOnRoute":[{"id":"3344622:1","PointRef":{"ref":"43004","type":"ScheduledStopPointRefStructure"}},{"id":"3344622:2","PointRef":{"ref":"43000","type":"ScheduledStopPointRefStructure"}}]}},{"id":"3344623","Name":"LSSF:S :Weekend","LineRef":{"ref":"LSSF"},"DirectionRef":{"ref":"S "},"pointsInSequence":{"PointOnRoute":[{"id":"3344623:1","PointRef":{"ref":"43004","type":"ScheduledStopPointRefStructure"}},{"id":"3344623:2","PointRef":{"ref":"43000","type":"ScheduledStopPointRefStructure"}}]}}]}},"ServiceCalendarFrame":{"id":"SF","dayTypes":{"DayType":[{"id":"72575","Name":"Weekday","properties":{"PropertyOfDay":{"DaysOfWeek":"Monday Tuesday Wednesday Thursday Friday "}}},{"id":"72576","Name":"Weekend","properties":{"PropertyOfDay":{"DaysOfWeek":"Saturday Sunday "}}}]},"dayTypeAssignments":{"DayTypeAssignment":{"DayTypeRef":null}}},"TimetableFrame":[{"id":"Timetable:3344620","Name":"LSSF:N :Weekday","frameValidityConditions":{"AvailabilityCondition":{"id":"LSSF:N :Weekday","FromDate":"2026-04-13T00:00:00-07:00","ToDate":"2026-06-12T23:59:00-07:00","dayTypes":{"DayTypeRef":{"ref":"72575"}}}},"vehicleJourneys":{"ServiceJourney":[{"id":"9425232","SiriVehicleJourneyRef":"9425232","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"06:30:00","DaysOffset":"0"},"Departure":{"Time":"06:30:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"07:05:00","DaysOffset":"0"},"Departure":{"Time":"07:05:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425233","SiriVehicleJourneyRef":"9425233","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"07:15:00","DaysOffset":"0"},"Departure":{"Time":"07:15:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"07:45:00","DaysOffset":"0"},"Departure":{"Time":"07:45:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425234","SiriVehicleJourneyRef":"9425234","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"08:00:00","DaysOffset":"0"},"Departure":{"Time":"08:00:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"08:30:00","DaysOffset":"0"},"Departure":{"Time":"08:30:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425235","SiriVehicleJourneyRef":"9425235","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"08:40:00","DaysOffset":"0"},"Departure":{"Time":"08:40:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"09:15:00","DaysOffset":"0"},"Departure":{"Time":"09:15:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425236","SiriVehicleJourneyRef":"9425236","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"09:25:00","DaysOffset":"0"},"Departure":{"Time":"09:25:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"10:00:00","DaysOffset":"0"},"Departure":{"Time":"10:00:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425237","SiriVehicleJourneyRef":"9425237","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"10:10:00","DaysOffset":"0"},"Departure":{"Time":"10:10:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"10:45:00","DaysOffset":"0"},"Departure":{"Time":"10:45:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425238","SiriVehicleJourneyRef":"9425238","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"11:50:00","DaysOffset":"0"},"Departure":{"Time":"11:50:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"12:25:00","DaysOffset":"0"},"Departure":{"Time":"12:25:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425239","SiriVehicleJourneyRef":"9425239","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"12:35:00","DaysOffset":"0"},"Departure":{"Time":"12:35:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"13:10:00","DaysOffset":"0"},"Departure":{"Time":"13:10:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425240","SiriVehicleJourneyRef":"9425240","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"13:45:00","DaysOffset":"0"},"Departure":{"Time":"13:45:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"14:20:00","DaysOffset":"0"},"Departure":{"Time":"14:20:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425241","SiriVehicleJourneyRef":"9425241","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"14:55:00","DaysOffset":"0"},"Departure":{"Time":"14:55:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"15:30:00","DaysOffset":"0"},"Departure":{"Time":"15:30:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425242","SiriVehicleJourneyRef":"9425242","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"15:50:00","DaysOffset":"0"},"Departure":{"Time":"15:50:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"16:25:00","DaysOffset":"0"},"Departure":{"Time":"16:25:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425243","SiriVehicleJourneyRef":"9425243","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"16:30:00","DaysOffset":"0"},"Departure":{"Time":"16:30:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"17:05:00","DaysOffset":"0"},"Departure":{"Time":"17:05:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425244","SiriVehicleJourneyRef":"9425244","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"17:25:00","DaysOffset":"0"},"Departure":{"Time":"17:25:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"18:00:00","DaysOffset":"0"},"Departure":{"Time":"18:00:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425245","SiriVehicleJourneyRef":"9425245","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"18:00:00","DaysOffset":"0"},"Departure":{"Time":"18:00:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"18:35:00","DaysOffset":"0"},"Departure":{"Time":"18:35:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425246","SiriVehicleJourneyRef":"9425246","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"18:55:00","DaysOffset":"0"},"Departure":{"Time":"18:55:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"19:25:00","DaysOffset":"0"},"Departure":{"Time":"19:25:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425247","SiriVehicleJourneyRef":"9425247","JourneyPatternView":{"RouteRef":{"ref":"3344620"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"20:00:00","DaysOffset":"0"},"Departure":{"Time":"20:00:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"20:30:00","DaysOffset":"0"},"Departure":{"Time":"20:30:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}}]}},{"id":"Timetable:3344621","Name":"LSSF:N :Weekend","frameValidityConditions":{"AvailabilityCondition":{"id":"LSSF:N :Weekend","FromDate":"2026-04-12T00:00:00-07:00","ToDate":"2026-06-13T23:59:00-07:00","dayTypes":{"DayTypeRef":{"ref":"72576"}}}},"vehicleJourneys":{"ServiceJourney":[{"id":"9428053","SiriVehicleJourneyRef":"9428053","JourneyPatternView":{"RouteRef":{"ref":"3344621"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"10:45:00","DaysOffset":"0"},"Departure":{"Time":"10:45:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"11:20:00","DaysOffset":"0"},"Departure":{"Time":"11:20:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9428054","SiriVehicleJourneyRef":"9428054","JourneyPatternView":{"RouteRef":{"ref":"3344621"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"12:15:00","DaysOffset":"0"},"Departure":{"Time":"12:15:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"12:50:00","DaysOffset":"0"},"Departure":{"Time":"12:50:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9428055","SiriVehicleJourneyRef":"9428055","JourneyPatternView":{"RouteRef":{"ref":"3344621"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"14:15:00","DaysOffset":"0"},"Departure":{"Time":"14:15:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"14:50:00","DaysOffset":"0"},"Departure":{"Time":"14:50:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9428056","SiriVehicleJourneyRef":"9428056","JourneyPatternView":{"RouteRef":{"ref":"3344621"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"15:45:00","DaysOffset":"0"},"Departure":{"Time":"15:45:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"16:20:00","DaysOffset":"0"},"Departure":{"Time":"16:20:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9428057","SiriVehicleJourneyRef":"9428057","JourneyPatternView":{"RouteRef":{"ref":"3344621"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"17:15:00","DaysOffset":"0"},"Departure":{"Time":"17:15:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"17:50:00","DaysOffset":"0"},"Departure":{"Time":"17:50:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9428058","SiriVehicleJourneyRef":"9428058","JourneyPatternView":{"RouteRef":{"ref":"3344621"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"18:00:00","DaysOffset":"0"},"Departure":{"Time":"18:00:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"18:55:00","DaysOffset":"0"},"Departure":{"Time":"18:55:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9428059","SiriVehicleJourneyRef":"9428059","JourneyPatternView":{"RouteRef":{"ref":"3344621"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"18:45:00","DaysOffset":"0"},"Departure":{"Time":"18:45:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"19:20:00","DaysOffset":"0"},"Departure":{"Time":"19:20:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9428060","SiriVehicleJourneyRef":"9428060","JourneyPatternView":{"RouteRef":{"ref":"3344621"},"DirectionRef":{"ref":"N "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"19:50:00","DaysOffset":"0"},"Departure":{"Time":"19:50:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"20:45:00","DaysOffset":"0"},"Departure":{"Time":"20:45:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}}]}},{"id":"Timetable:3344622","Name":"LSSF:S :Weekday","frameValidityConditions":{"AvailabilityCondition":{"id":"LSSF:S :Weekday","FromDate":"2026-04-13T00:00:00-07:00","ToDate":"2026-06-12T23:59:00-07:00","dayTypes":{"DayTypeRef":{"ref":"72575"}}}},"vehicleJourneys":{"ServiceJourney":[{"id":"9425203","SiriVehicleJourneyRef":"9425203","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"05:45:00","DaysOffset":"0"},"Departure":{"Time":"05:45:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"06:20:00","DaysOffset":"0"},"Departure":{"Time":"06:20:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425204","SiriVehicleJourneyRef":"9425204","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"06:30:00","DaysOffset":"0"},"Departure":{"Time":"06:30:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"07:05:00","DaysOffset":"0"},"Departure":{"Time":"07:05:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425205","SiriVehicleJourneyRef":"9425205","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"07:15:00","DaysOffset":"0"},"Departure":{"Time":"07:15:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"07:50:00","DaysOffset":"0"},"Departure":{"Time":"07:50:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425206","SiriVehicleJourneyRef":"9425206","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"07:55:00","DaysOffset":"0"},"Departure":{"Time":"07:55:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"08:30:00","DaysOffset":"0"},"Departure":{"Time":"08:30:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425207","SiriVehicleJourneyRef":"9425207","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"08:40:00","DaysOffset":"0"},"Departure":{"Time":"08:40:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"09:15:00","DaysOffset":"0"},"Departure":{"Time":"09:15:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425208","SiriVehicleJourneyRef":"9425208","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"09:25:00","DaysOffset":"0"},"Departure":{"Time":"09:25:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"10:00:00","DaysOffset":"0"},"Departure":{"Time":"10:00:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425209","SiriVehicleJourneyRef":"9425209","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"10:10:00","DaysOffset":"0"},"Departure":{"Time":"10:10:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"10:45:00","DaysOffset":"0"},"Departure":{"Time":"10:45:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425210","SiriVehicleJourneyRef":"9425210","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"11:50:00","DaysOffset":"0"},"Departure":{"Time":"11:50:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"12:25:00","DaysOffset":"0"},"Departure":{"Time":"12:25:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425211","SiriVehicleJourneyRef":"9425211","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"13:00:00","DaysOffset":"0"},"Departure":{"Time":"13:00:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"13:35:00","DaysOffset":"0"},"Departure":{"Time":"13:35:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425212","SiriVehicleJourneyRef":"9425212","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"14:10:00","DaysOffset":"0"},"Departure":{"Time":"14:10:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"14:45:00","DaysOffset":"0"},"Departure":{"Time":"14:45:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425213","SiriVehicleJourneyRef":"9425213","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"15:05:00","DaysOffset":"0"},"Departure":{"Time":"15:05:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"15:40:00","DaysOffset":"0"},"Departure":{"Time":"15:40:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425214","SiriVehicleJourneyRef":"9425214","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"15:45:00","DaysOffset":"0"},"Departure":{"Time":"15:45:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"16:20:00","DaysOffset":"0"},"Departure":{"Time":"16:20:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425215","SiriVehicleJourneyRef":"9425215","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"16:35:00","DaysOffset":"0"},"Departure":{"Time":"16:35:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"17:10:00","DaysOffset":"0"},"Departure":{"Time":"17:10:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425216","SiriVehicleJourneyRef":"9425216","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"17:15:00","DaysOffset":"0"},"Departure":{"Time":"17:15:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"17:50:00","DaysOffset":"0"},"Departure":{"Time":"17:50:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425217","SiriVehicleJourneyRef":"9425217","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"18:10:00","DaysOffset":"0"},"Departure":{"Time":"18:10:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"18:45:00","DaysOffset":"0"},"Departure":{"Time":"18:45:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9425218","SiriVehicleJourneyRef":"9425218","JourneyPatternView":{"RouteRef":{"ref":"3344622"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"19:15:00","DaysOffset":"0"},"Departure":{"Time":"19:15:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"19:50:00","DaysOffset":"0"},"Departure":{"Time":"19:50:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}}]}},{"id":"Timetable:3344623","Name":"LSSF:S :Weekend","frameValidityConditions":{"AvailabilityCondition":{"id":"LSSF:S :Weekend","FromDate":"2026-04-12T00:00:00-07:00","ToDate":"2026-06-13T23:59:00-07:00","dayTypes":{"DayTypeRef":{"ref":"72576"}}}},"vehicleJourneys":{"ServiceJourney":[{"id":"9428046","SiriVehicleJourneyRef":"9428046","JourneyPatternView":{"RouteRef":{"ref":"3344623"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"09:00:00","DaysOffset":"0"},"Departure":{"Time":"09:00:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"09:55:00","DaysOffset":"0"},"Departure":{"Time":"09:55:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9428047","SiriVehicleJourneyRef":"9428047","JourneyPatternView":{"RouteRef":{"ref":"3344623"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"10:00:00","DaysOffset":"0"},"Departure":{"Time":"10:00:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"10:35:00","DaysOffset":"0"},"Departure":{"Time":"10:35:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9428049","SiriVehicleJourneyRef":"9428049","JourneyPatternView":{"RouteRef":{"ref":"3344623"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"11:30:00","DaysOffset":"0"},"Departure":{"Time":"11:30:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"12:05:00","DaysOffset":"0"},"Departure":{"Time":"12:05:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9428050","SiriVehicleJourneyRef":"9428050","JourneyPatternView":{"RouteRef":{"ref":"3344623"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"13:30:00","DaysOffset":"0"},"Departure":{"Time":"13:30:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"14:05:00","DaysOffset":"0"},"Departure":{"Time":"14:05:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9428051","SiriVehicleJourneyRef":"9428051","JourneyPatternView":{"RouteRef":{"ref":"3344623"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"15:00:00","DaysOffset":"0"},"Departure":{"Time":"15:00:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"15:35:00","DaysOffset":"0"},"Departure":{"Time":"15:35:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9428048","SiriVehicleJourneyRef":"9428048","JourneyPatternView":{"RouteRef":{"ref":"3344623"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"16:30:00","DaysOffset":"0"},"Departure":{"Time":"16:30:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"17:05:00","DaysOffset":"0"},"Departure":{"Time":"17:05:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}},{"id":"9428052","SiriVehicleJourneyRef":"9428052","JourneyPatternView":{"RouteRef":{"ref":"3344623"},"DirectionRef":{"ref":"S "}},"calls":{"Call":[{"order":"1","ScheduledStopPointRef":{"ref":"43004"},"Arrival":{"Time":"18:00:00","DaysOffset":"0"},"Departure":{"Time":"18:00:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}},{"order":"2","ScheduledStopPointRef":{"ref":"43000"},"Arrival":{"Time":"18:35:00","DaysOffset":"0"},"Departure":{"Time":"18:35:00","DaysOffset":"0"},"DestinationDisplayView":{"Name":""}}]}}]}}]}}
+{
+  "Content": {
+    "ServiceCalendarFrame": {
+      "dayTypeAssignments": {
+        "DayTypeAssignment": {
+          "DayTypeRef": null
+        }
+      },
+      "dayTypes": {
+        "DayType": [
+          {
+            "Name": "Weekday",
+            "id": "72575",
+            "properties": {
+              "PropertyOfDay": {
+                "DaysOfWeek": "Monday Tuesday Wednesday Thursday Friday "
+              }
+            }
+          },
+          {
+            "Name": "Weekend",
+            "id": "72576",
+            "properties": {
+              "PropertyOfDay": {
+                "DaysOfWeek": "Saturday Sunday "
+              }
+            }
+          }
+        ]
+      },
+      "id": "SF"
+    },
+    "ServiceFrame": {
+      "id": "SF",
+      "routes": {
+        "Route": [
+          {
+            "DirectionRef": {
+              "ref": "N "
+            },
+            "LineRef": {
+              "ref": "LSSF"
+            },
+            "Name": "LSSF:N :Weekday",
+            "id": "3344620",
+            "pointsInSequence": {
+              "PointOnRoute": [
+                {
+                  "PointRef": {
+                    "ref": "43000",
+                    "type": "ScheduledStopPointRefStructure"
+                  },
+                  "id": "3344620:1"
+                },
+                {
+                  "PointRef": {
+                    "ref": "43004",
+                    "type": "ScheduledStopPointRefStructure"
+                  },
+                  "id": "3344620:2"
+                }
+              ]
+            }
+          },
+          {
+            "DirectionRef": {
+              "ref": "N "
+            },
+            "LineRef": {
+              "ref": "LSSF"
+            },
+            "Name": "LSSF:N :Weekend",
+            "id": "3344621",
+            "pointsInSequence": {
+              "PointOnRoute": [
+                {
+                  "PointRef": {
+                    "ref": "43000",
+                    "type": "ScheduledStopPointRefStructure"
+                  },
+                  "id": "3344621:1"
+                },
+                {
+                  "PointRef": {
+                    "ref": "43004",
+                    "type": "ScheduledStopPointRefStructure"
+                  },
+                  "id": "3344621:2"
+                }
+              ]
+            }
+          },
+          {
+            "DirectionRef": {
+              "ref": "S "
+            },
+            "LineRef": {
+              "ref": "LSSF"
+            },
+            "Name": "LSSF:S :Weekday",
+            "id": "3344622",
+            "pointsInSequence": {
+              "PointOnRoute": [
+                {
+                  "PointRef": {
+                    "ref": "43004",
+                    "type": "ScheduledStopPointRefStructure"
+                  },
+                  "id": "3344622:1"
+                },
+                {
+                  "PointRef": {
+                    "ref": "43000",
+                    "type": "ScheduledStopPointRefStructure"
+                  },
+                  "id": "3344622:2"
+                }
+              ]
+            }
+          },
+          {
+            "DirectionRef": {
+              "ref": "S "
+            },
+            "LineRef": {
+              "ref": "LSSF"
+            },
+            "Name": "LSSF:S :Weekend",
+            "id": "3344623",
+            "pointsInSequence": {
+              "PointOnRoute": [
+                {
+                  "PointRef": {
+                    "ref": "43004",
+                    "type": "ScheduledStopPointRefStructure"
+                  },
+                  "id": "3344623:1"
+                },
+                {
+                  "PointRef": {
+                    "ref": "43000",
+                    "type": "ScheduledStopPointRefStructure"
+                  },
+                  "id": "3344623:2"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "TimetableFrame": [
+      {
+        "Name": "LSSF:N :Weekday",
+        "frameValidityConditions": {
+          "AvailabilityCondition": {
+            "FromDate": "2026-04-13T00:00:00-07:00",
+            "ToDate": "2026-06-12T23:59:00-07:00",
+            "dayTypes": {
+              "DayTypeRef": {
+                "ref": "72575"
+              }
+            },
+            "id": "LSSF:N :Weekday"
+          }
+        },
+        "id": "Timetable:3344620",
+        "vehicleJourneys": {
+          "ServiceJourney": [
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425232",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "06:30:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "06:30:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "07:05:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "07:05:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425232"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425233",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "07:15:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "07:15:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "07:45:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "07:45:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425233"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425234",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "08:00:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "08:00:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "08:30:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "08:30:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425234"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425235",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "08:40:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "08:40:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "09:15:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "09:15:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425235"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425236",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "09:25:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "09:25:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "10:00:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "10:00:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425236"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425237",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "10:10:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "10:10:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "10:45:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "10:45:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425237"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425238",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "11:50:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "11:50:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "12:25:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "12:25:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425238"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425239",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "12:35:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "12:35:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "13:10:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "13:10:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425239"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425240",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "13:45:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "13:45:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "14:20:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "14:20:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425240"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425241",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "14:55:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "14:55:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "15:30:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "15:30:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425241"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425242",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "15:50:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "15:50:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "16:25:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "16:25:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425242"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425243",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "16:30:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "16:30:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "17:05:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "17:05:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425243"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425244",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "17:25:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "17:25:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "18:00:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "18:00:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425244"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425245",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "18:00:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "18:00:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "18:35:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "18:35:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425245"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425246",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "18:55:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "18:55:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "19:25:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "19:25:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425246"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344620"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425247",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "20:00:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "20:00:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "20:30:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "20:30:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425247"
+            }
+          ]
+        }
+      },
+      {
+        "Name": "LSSF:N :Weekend",
+        "frameValidityConditions": {
+          "AvailabilityCondition": {
+            "FromDate": "2026-04-12T00:00:00-07:00",
+            "ToDate": "2026-06-13T23:59:00-07:00",
+            "dayTypes": {
+              "DayTypeRef": {
+                "ref": "72576"
+              }
+            },
+            "id": "LSSF:N :Weekend"
+          }
+        },
+        "id": "Timetable:3344621",
+        "vehicleJourneys": {
+          "ServiceJourney": [
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344621"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428053",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "10:45:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "10:45:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "11:20:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "11:20:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428053"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344621"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428054",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "12:15:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "12:15:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "12:50:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "12:50:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428054"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344621"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428055",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "14:15:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "14:15:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "14:50:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "14:50:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428055"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344621"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428056",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "15:45:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "15:45:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "16:20:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "16:20:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428056"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344621"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428057",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "17:15:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "17:15:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "17:50:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "17:50:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428057"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344621"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428058",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "18:00:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "18:00:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "18:55:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "18:55:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428058"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344621"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428059",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "18:45:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "18:45:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "19:20:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "19:20:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428059"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "N "
+                },
+                "RouteRef": {
+                  "ref": "3344621"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428060",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "19:50:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "19:50:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "20:45:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "20:45:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428060"
+            }
+          ]
+        }
+      },
+      {
+        "Name": "LSSF:S :Weekday",
+        "frameValidityConditions": {
+          "AvailabilityCondition": {
+            "FromDate": "2026-04-13T00:00:00-07:00",
+            "ToDate": "2026-06-12T23:59:00-07:00",
+            "dayTypes": {
+              "DayTypeRef": {
+                "ref": "72575"
+              }
+            },
+            "id": "LSSF:S :Weekday"
+          }
+        },
+        "id": "Timetable:3344622",
+        "vehicleJourneys": {
+          "ServiceJourney": [
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425203",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "05:45:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "05:45:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "06:20:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "06:20:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425203"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425204",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "06:30:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "06:30:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "07:05:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "07:05:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425204"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425205",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "07:15:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "07:15:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "07:50:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "07:50:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425205"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425206",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "07:55:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "07:55:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "08:30:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "08:30:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425206"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425207",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "08:40:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "08:40:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "09:15:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "09:15:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425207"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425208",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "09:25:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "09:25:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "10:00:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "10:00:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425208"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425209",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "10:10:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "10:10:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "10:45:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "10:45:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425209"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425210",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "11:50:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "11:50:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "12:25:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "12:25:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425210"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425211",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "13:00:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "13:00:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "13:35:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "13:35:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425211"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425212",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "14:10:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "14:10:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "14:45:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "14:45:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425212"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425213",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "15:05:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "15:05:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "15:40:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "15:40:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425213"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425214",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "15:45:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "15:45:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "16:20:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "16:20:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425214"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425215",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "16:35:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "16:35:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "17:10:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "17:10:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425215"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425216",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "17:15:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "17:15:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "17:50:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "17:50:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425216"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425217",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "18:10:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "18:10:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "18:45:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "18:45:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425217"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344622"
+                }
+              },
+              "SiriVehicleJourneyRef": "9425218",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "19:15:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "19:15:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "19:50:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "19:50:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9425218"
+            }
+          ]
+        }
+      },
+      {
+        "Name": "LSSF:S :Weekend",
+        "frameValidityConditions": {
+          "AvailabilityCondition": {
+            "FromDate": "2026-04-12T00:00:00-07:00",
+            "ToDate": "2026-06-13T23:59:00-07:00",
+            "dayTypes": {
+              "DayTypeRef": {
+                "ref": "72576"
+              }
+            },
+            "id": "LSSF:S :Weekend"
+          }
+        },
+        "id": "Timetable:3344623",
+        "vehicleJourneys": {
+          "ServiceJourney": [
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344623"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428046",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "09:00:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "09:00:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "09:55:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "09:55:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428046"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344623"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428047",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "10:00:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "10:00:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "10:35:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "10:35:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428047"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344623"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428049",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "11:30:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "11:30:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "12:05:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "12:05:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428049"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344623"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428050",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "13:30:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "13:30:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "14:05:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "14:05:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428050"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344623"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428051",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "15:00:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "15:00:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "15:35:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "15:35:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428051"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344623"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428048",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "16:30:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "16:30:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "17:05:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "17:05:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428048"
+            },
+            {
+              "JourneyPatternView": {
+                "DirectionRef": {
+                  "ref": "S "
+                },
+                "RouteRef": {
+                  "ref": "3344623"
+                }
+              },
+              "SiriVehicleJourneyRef": "9428052",
+              "calls": {
+                "Call": [
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "18:00:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "18:00:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43004"
+                    },
+                    "order": "1"
+                  },
+                  {
+                    "Arrival": {
+                      "DaysOffset": "0",
+                      "Time": "18:35:00"
+                    },
+                    "Departure": {
+                      "DaysOffset": "0",
+                      "Time": "18:35:00"
+                    },
+                    "DestinationDisplayView": {
+                      "Name": ""
+                    },
+                    "ScheduledStopPointRef": {
+                      "ref": "43000"
+                    },
+                    "order": "2"
+                  }
+                ]
+              },
+              "id": "9428052"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
