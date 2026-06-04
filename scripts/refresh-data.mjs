@@ -44,6 +44,20 @@ async function loadDotEnv(filePath) {
   }
 }
 
+// Recursively sort object keys for stable output. Arrays keep their order,
+// since schedule sequence is meaningful.
+function canonicalize(value) {
+  if (Array.isArray(value)) return value.map(canonicalize);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(
+      Object.keys(value)
+        .sort()
+        .map((key) => [key, canonicalize(value[key])]),
+    );
+  }
+  return value;
+}
+
 async function main() {
   const envFromFile = await loadDotEnv(ENV_FILE);
   const apiKey = process.env.API_511_KEY || envFromFile.API_511_KEY;
@@ -66,9 +80,16 @@ async function main() {
   }
 
   const payload = await response.text();
+
+  // Canonicalize so the on-disk file changes only when the data actually
+  // changes. The 511 API can vary key ordering/whitespace between requests;
+  // sorting object keys (array order is preserved) and pretty-printing keeps
+  // byte-identical schedules byte-identical, so we don't churn commits daily.
+  const normalized = JSON.stringify(canonicalize(JSON.parse(payload)), null, 2) + "\n";
+
   const outputDir = path.dirname(OUTPUT_FILE);
   await mkdir(outputDir, { recursive: true });
-  await writeFile(OUTPUT_FILE, payload, "utf8");
+  await writeFile(OUTPUT_FILE, normalized, "utf8");
 
   console.log(`Wrote latest schedule to ${OUTPUT_FILE}`);
 }
