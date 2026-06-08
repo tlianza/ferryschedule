@@ -69,6 +69,23 @@ function normalizeAlert(entity) {
   };
 }
 
+// The Larkspur <-> San Francisco line (LSSF). Timetable refs are stripped, so
+// the stop IDs that identify this line live here.
+const LINE_STOP_IDS = new Set(["43000", "43004"]); // SF Ferry Bldg (Gate C), Larkspur
+const LINE_ROUTE_IDS = new Set(["LSSF"]);
+
+// Whether an alert affects this line. 511 attaches a bare agency-level entity
+// to most alerts, so we can't treat "agency = GF" as relevant on its own. The
+// rule: if an alert names any specific stop or route, it must name one of ours;
+// if it names none (truly agency-wide), show it.
+function alertAffectsLine(alert) {
+  const targeted = alert.informedEntities.filter((e) => e.stop || e.route);
+  if (targeted.length === 0) return true;
+  return targeted.some(
+    (e) => (e.stop && LINE_STOP_IDS.has(e.stop)) || (e.route && LINE_ROUTE_IDS.has(e.route)),
+  );
+}
+
 function alertsResponse(body, { sMaxAge = 300 } = {}) {
   return new Response(JSON.stringify(body), {
     headers: {
@@ -78,23 +95,23 @@ function alertsResponse(body, { sMaxAge = 300 } = {}) {
   });
 }
 
-async function handleAlerts(env) {
+async function handleAlerts(env, requestUrl) {
   const apiKey = env.API_511_KEY;
   if (!apiKey) {
     // Fail soft: the page should still render without alerts.
     return alertsResponse({ alerts: [], error: "missing_api_key" }, { sMaxAge: 60 });
   }
 
-  const url = new URL(ALERTS_URL);
-  url.searchParams.set("api_key", apiKey);
-  url.searchParams.set("agency", "GF");
-  url.searchParams.set("format", "json");
+  const apiUrl = new URL(ALERTS_URL);
+  apiUrl.searchParams.set("api_key", apiKey);
+  apiUrl.searchParams.set("agency", "GF");
+  apiUrl.searchParams.set("format", "json");
 
   let upstream;
   try {
     // cacheEverything caches the upstream JSON at the edge so we don't hit
     // 511's rate limit on every request. (No-op under local `wrangler dev`.)
-    upstream = await fetch(url, { cf: { cacheTtl: 300, cacheEverything: true } });
+    upstream = await fetch(apiUrl, { cf: { cacheTtl: 300, cacheEverything: true } });
   } catch {
     return alertsResponse({ alerts: [], error: "fetch_failed" }, { sMaxAge: 60 });
   }
@@ -113,14 +130,20 @@ async function handleAlerts(env) {
   }
 
   const alerts = (data.Entities ?? []).map(normalizeAlert).filter(Boolean);
-  return alertsResponse({ alerts, feedTimestamp: data.Header?.Timestamp ?? null });
+  // ?all=1 bypasses the line filter, for inspecting every GF alert.
+  const showAll = requestUrl.searchParams.get("all") === "1";
+  const filtered = showAll ? alerts : alerts.filter(alertAffectsLine);
+  return alertsResponse({
+    alerts: filtered,
+    feedTimestamp: data.Header?.Timestamp ?? null,
+  });
 }
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (url.pathname === ALERTS_PATH) {
-      return handleAlerts(env);
+      return handleAlerts(env, url);
     }
 
     const response = await env.ASSETS.fetch(request);
