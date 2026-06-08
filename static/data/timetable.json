@@ -10,7 +10,6 @@
         "DayType": [
           {
             "Name": "Weekday",
-            "id": "72575",
             "properties": {
               "PropertyOfDay": {
                 "DaysOfWeek": "Monday Tuesday Wednesday Thursday Friday "
@@ -19,7 +18,6 @@
           },
           {
             "Name": "Weekend",
-            "id": "72576",
             "properties": {
               "PropertyOfDay": {
                 "DaysOfWeek": "Saturday Sunday "
@@ -27,121 +25,83 @@
             }
           }
         ]
-      },
-      "id": "SF"
+      }
     },
     "ServiceFrame": {
-      "id": "SF",
       "routes": {
         "Route": [
           {
-            "DirectionRef": {
-              "ref": "N "
-            },
-            "LineRef": {
-              "ref": "LSSF"
-            },
+            "DirectionRef": {},
+            "LineRef": {},
             "Name": "LSSF:N :Weekday",
-            "id": "3344620",
             "pointsInSequence": {
               "PointOnRoute": [
                 {
                   "PointRef": {
-                    "ref": "43000",
                     "type": "ScheduledStopPointRefStructure"
-                  },
-                  "id": "3344620:1"
+                  }
                 },
                 {
                   "PointRef": {
-                    "ref": "43004",
                     "type": "ScheduledStopPointRefStructure"
-                  },
-                  "id": "3344620:2"
+                  }
                 }
               ]
             }
           },
           {
-            "DirectionRef": {
-              "ref": "N "
-            },
-            "LineRef": {
-              "ref": "LSSF"
-            },
+            "DirectionRef": {},
+            "LineRef": {},
             "Name": "LSSF:N :Weekend",
-            "id": "3344621",
             "pointsInSequence": {
               "PointOnRoute": [
                 {
                   "PointRef": {
-                    "ref": "43000",
                     "type": "ScheduledStopPointRefStructure"
-                  },
-                  "id": "3344621:1"
+                  }
                 },
                 {
                   "PointRef": {
-                    "ref": "43004",
                     "type": "ScheduledStopPointRefStructure"
-                  },
-                  "id": "3344621:2"
+                  }
                 }
               ]
             }
           },
           {
-            "DirectionRef": {
-              "ref": "S "
-            },
-            "LineRef": {
-              "ref": "LSSF"
-            },
+            "DirectionRef": {},
+            "LineRef": {},
             "Name": "LSSF:S :Weekday",
-            "id": "3344622",
             "pointsInSequence": {
               "PointOnRoute": [
                 {
                   "PointRef": {
-                    "ref": "43004",
                     "type": "ScheduledStopPointRefStructure"
-                  },
-                  "id": "3344622:1"
+                  }
                 },
                 {
                   "PointRef": {
-                    "ref": "43000",
                     "type": "ScheduledStopPointRefStructure"
-                  },
-                  "id": "3344622:2"
+                  }
                 }
               ]
             }
           },
           {
-            "DirectionRef": {
-              "ref": "S "
-            },
-            "LineRef": {
-              "ref": "LSSF"
-            },
+            "DirectionRef": {},
+            "LineRef": {},
             "Name": "LSSF:S :Weekend",
-            "id": "3344623",
             "pointsInSequence": {
               "PointOnRoute": [
                 {
                   "PointRef": {
-                    "ref": "43004",
                     "type": "ScheduledStopPointRefStructure"
-                  },
-                  "id": "3344623:1"
+                  }
                 },
                 {
                   "PointRef": {
-                    "ref": "43000",
                     "type": "ScheduledStopPointRefStructure"
-                  },
-                  "id": "3344623:2"
+                  }
                 }
               ]
             }
@@ -154,27 +114,19 @@
         "Name": "LSSF:N :Weekday",
         "frameValidityConditions": {
           "AvailabilityCondition": {
-            "FromDate": "2026-04-13T00:00:00-07:00",
+            "FromDate": "2026-05-18T00:00:00-07:00",
             "ToDate": "2026-06-12T23:59:00-07:00",
             "dayTypes": {
-              "DayTypeRef": {
-                "ref": "72575"
-              }
-            },
-            "id": "LSSF:N :Weekday"
+              "DayTypeRef": {}
+            }
           }
         },
-        "id": "Timetable:3344620",
         "vehicleJourneys": {
           "ServiceJourney": [
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425232",
               "calls": {
@@ -191,9 +143,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -208,23 +158,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425232"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425233",
               "calls": {
@@ -241,9 +184,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -258,23 +199,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425233"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425234",
               "calls": {
@@ -291,9 +225,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -308,23 +240,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425234"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425235",
               "calls": {
@@ -341,9 +266,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -358,23 +281,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425235"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425236",
               "calls": {
@@ -391,9 +307,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -408,23 +322,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425236"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425237",
               "calls": {
@@ -441,9 +348,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -458,23 +363,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425237"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425238",
               "calls": {
@@ -491,9 +389,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -508,23 +404,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425238"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425239",
               "calls": {
@@ -541,9 +430,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -558,23 +445,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425239"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425240",
               "calls": {
@@ -591,9 +471,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -608,23 +486,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425240"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425241",
               "calls": {
@@ -641,9 +512,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -658,23 +527,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425241"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425242",
               "calls": {
@@ -691,9 +553,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -708,23 +568,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425242"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425243",
               "calls": {
@@ -741,9 +594,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -758,23 +609,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425243"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425244",
               "calls": {
@@ -791,9 +635,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -808,23 +650,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425244"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425245",
               "calls": {
@@ -841,9 +676,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -858,23 +691,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425245"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425246",
               "calls": {
@@ -891,9 +717,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -908,23 +732,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425246"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344620"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425247",
               "calls": {
@@ -941,9 +758,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -958,14 +773,11 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425247"
+              }
             }
           ]
         }
@@ -974,27 +786,19 @@
         "Name": "LSSF:N :Weekend",
         "frameValidityConditions": {
           "AvailabilityCondition": {
-            "FromDate": "2026-04-12T00:00:00-07:00",
+            "FromDate": "2026-05-23T00:00:00-07:00",
             "ToDate": "2026-06-13T23:59:00-07:00",
             "dayTypes": {
-              "DayTypeRef": {
-                "ref": "72576"
-              }
-            },
-            "id": "LSSF:N :Weekend"
+              "DayTypeRef": {}
+            }
           }
         },
-        "id": "Timetable:3344621",
         "vehicleJourneys": {
           "ServiceJourney": [
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344621"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428053",
               "calls": {
@@ -1011,9 +815,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1028,23 +830,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428053"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344621"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428054",
               "calls": {
@@ -1061,9 +856,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1078,23 +871,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428054"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344621"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428055",
               "calls": {
@@ -1111,9 +897,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1128,23 +912,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428055"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344621"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428056",
               "calls": {
@@ -1161,9 +938,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1178,23 +953,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428056"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344621"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428057",
               "calls": {
@@ -1211,9 +979,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1228,23 +994,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428057"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344621"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428058",
               "calls": {
@@ -1261,9 +1020,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1278,23 +1035,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428058"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344621"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428059",
               "calls": {
@@ -1311,9 +1061,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1328,23 +1076,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428059"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "N "
-                },
-                "RouteRef": {
-                  "ref": "3344621"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428060",
               "calls": {
@@ -1361,9 +1102,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1378,14 +1117,11 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428060"
+              }
             }
           ]
         }
@@ -1394,27 +1130,19 @@
         "Name": "LSSF:S :Weekday",
         "frameValidityConditions": {
           "AvailabilityCondition": {
-            "FromDate": "2026-04-13T00:00:00-07:00",
+            "FromDate": "2026-05-18T00:00:00-07:00",
             "ToDate": "2026-06-12T23:59:00-07:00",
             "dayTypes": {
-              "DayTypeRef": {
-                "ref": "72575"
-              }
-            },
-            "id": "LSSF:S :Weekday"
+              "DayTypeRef": {}
+            }
           }
         },
-        "id": "Timetable:3344622",
         "vehicleJourneys": {
           "ServiceJourney": [
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425203",
               "calls": {
@@ -1431,9 +1159,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1448,23 +1174,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425203"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425204",
               "calls": {
@@ -1481,9 +1200,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1498,23 +1215,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425204"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425205",
               "calls": {
@@ -1531,9 +1241,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1548,23 +1256,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425205"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425206",
               "calls": {
@@ -1581,9 +1282,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1598,23 +1297,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425206"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425207",
               "calls": {
@@ -1631,9 +1323,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1648,23 +1338,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425207"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425208",
               "calls": {
@@ -1681,9 +1364,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1698,23 +1379,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425208"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425209",
               "calls": {
@@ -1731,9 +1405,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1748,23 +1420,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425209"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425210",
               "calls": {
@@ -1781,9 +1446,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1798,23 +1461,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425210"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425211",
               "calls": {
@@ -1831,9 +1487,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1848,23 +1502,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425211"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425212",
               "calls": {
@@ -1881,9 +1528,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1898,23 +1543,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425212"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425213",
               "calls": {
@@ -1931,9 +1569,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1948,23 +1584,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425213"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425214",
               "calls": {
@@ -1981,9 +1610,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -1998,23 +1625,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425214"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425215",
               "calls": {
@@ -2031,9 +1651,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -2048,23 +1666,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425215"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425216",
               "calls": {
@@ -2081,9 +1692,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -2098,23 +1707,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425216"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425217",
               "calls": {
@@ -2131,9 +1733,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -2148,23 +1748,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425217"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344622"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9425218",
               "calls": {
@@ -2181,9 +1774,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -2198,14 +1789,11 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9425218"
+              }
             }
           ]
         }
@@ -2214,27 +1802,19 @@
         "Name": "LSSF:S :Weekend",
         "frameValidityConditions": {
           "AvailabilityCondition": {
-            "FromDate": "2026-04-12T00:00:00-07:00",
+            "FromDate": "2026-05-23T00:00:00-07:00",
             "ToDate": "2026-06-13T23:59:00-07:00",
             "dayTypes": {
-              "DayTypeRef": {
-                "ref": "72576"
-              }
-            },
-            "id": "LSSF:S :Weekend"
+              "DayTypeRef": {}
+            }
           }
         },
-        "id": "Timetable:3344623",
         "vehicleJourneys": {
           "ServiceJourney": [
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344623"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428046",
               "calls": {
@@ -2251,9 +1831,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -2268,23 +1846,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428046"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344623"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428047",
               "calls": {
@@ -2301,9 +1872,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -2318,23 +1887,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428047"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344623"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428049",
               "calls": {
@@ -2351,9 +1913,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -2368,23 +1928,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428049"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344623"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428050",
               "calls": {
@@ -2401,9 +1954,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -2418,23 +1969,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428050"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344623"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428051",
               "calls": {
@@ -2451,9 +1995,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -2468,23 +2010,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428051"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344623"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428048",
               "calls": {
@@ -2501,9 +2036,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -2518,23 +2051,16 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428048"
+              }
             },
             {
               "JourneyPatternView": {
-                "DirectionRef": {
-                  "ref": "S "
-                },
-                "RouteRef": {
-                  "ref": "3344623"
-                }
+                "DirectionRef": {},
+                "RouteRef": {}
               },
               "SiriVehicleJourneyRef": "9428052",
               "calls": {
@@ -2551,9 +2077,7 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43004"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "1"
                   },
                   {
@@ -2568,14 +2092,11 @@
                     "DestinationDisplayView": {
                       "Name": ""
                     },
-                    "ScheduledStopPointRef": {
-                      "ref": "43000"
-                    },
+                    "ScheduledStopPointRef": {},
                     "order": "2"
                   }
                 ]
-              },
-              "id": "9428052"
+              }
             }
           ]
         }
