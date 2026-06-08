@@ -126,6 +126,45 @@ td.now {
   font-weight: 700;
 }
 
+.alerts {
+  display: grid;
+  gap: 0.5rem;
+  background: #fff7ed;
+  border: 1px solid #f3cda0;
+  border-left: 4px solid var(--soon);
+  border-radius: 12px;
+  padding: 0.6rem 0.7rem;
+  box-shadow: 0 10px 30px #10301c14;
+  animation: rise 600ms ease-out;
+}
+
+.alerts h2 {
+  font-size: 0.95rem;
+  color: var(--soon);
+}
+
+.alert {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.alert + .alert {
+  border-top: 1px solid #f3cda0;
+  padding-top: 0.5rem;
+}
+
+.alert-header {
+  margin: 0;
+  font-weight: 700;
+}
+
+.alert-desc {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: #5a4631;
+}
+
 .meta {
   color: var(--muted);
   font-size: 0.75rem;

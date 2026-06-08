@@ -163,7 +163,61 @@ async function inferDirectionFromLocation() {
   });
 }
 
+async function loadAlerts() {
+  const response = await fetch("/data/alerts.json");
+  if (!response.ok) return [];
+  const data = await response.json();
+  return Array.isArray(data.alerts) ? data.alerts : [];
+}
+
+function renderAlerts(alerts, container) {
+  container.innerHTML = "";
+  if (!alerts.length) {
+    container.hidden = true;
+    return;
+  }
+
+  const heading = document.createElement("h2");
+  heading.textContent = alerts.length === 1 ? "Service Alert" : "Service Alerts";
+  container.appendChild(heading);
+
+  // Build nodes with textContent so feed text can never inject markup.
+  alerts.forEach((alert) => {
+    const card = document.createElement("article");
+    card.className = "alert";
+
+    if (alert.header) {
+      const header = document.createElement("p");
+      header.className = "alert-header";
+      header.textContent = alert.header;
+      card.appendChild(header);
+    }
+    if (alert.description) {
+      const desc = document.createElement("p");
+      desc.className = "alert-desc";
+      desc.textContent = alert.description;
+      card.appendChild(desc);
+    }
+    container.appendChild(card);
+  });
+
+  container.hidden = false;
+}
+
+async function initAlerts() {
+  const container = document.querySelector("#alerts");
+  if (!container) return;
+  try {
+    renderAlerts(await loadAlerts(), container);
+  } catch (error) {
+    // Alerts are supplementary; never let a failure here break the schedule.
+    console.error("Could not load service alerts", error);
+  }
+}
+
 async function boot() {
+  initAlerts();
+
   const select = document.querySelector("#schedule-select");
   const status = document.querySelector("#status");
   const title = document.querySelector("#table-title");
