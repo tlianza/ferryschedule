@@ -165,14 +165,24 @@ async function inferDirectionFromLocation() {
 
 async function loadAlerts() {
   const response = await fetch("/data/alerts.json");
-  if (!response.ok) return [];
+  if (!response.ok) return { alerts: [], error: `http_${response.status}` };
   const data = await response.json();
-  return Array.isArray(data.alerts) ? data.alerts : [];
+  return {
+    alerts: Array.isArray(data.alerts) ? data.alerts : [],
+    error: data.error || null,
+  };
 }
 
-function renderAlerts(alerts, container) {
+function formatCheckedAt(date) {
+  return date.toLocaleString([], { dateStyle: "medium", timeStyle: "short" });
+}
+
+function renderAlerts(alerts, container, { checkedAt, error } = {}) {
   container.innerHTML = "";
-  if (!alerts.length) {
+
+  // Couldn't actually reach the feed: stay quiet rather than imply all-clear.
+  if (!alerts.length && error) {
+    container.classList.remove("is-empty");
     container.hidden = true;
     return;
   }
@@ -180,6 +190,27 @@ function renderAlerts(alerts, container) {
   const heading = document.createElement("h2");
   heading.textContent = alerts.length === 1 ? "Service Alert" : "Service Alerts";
   container.appendChild(heading);
+
+  if (!alerts.length) {
+    // All-clear: reassure the user and show when we last checked.
+    container.classList.add("is-empty");
+    const message = document.createElement("p");
+    message.className = "alert-none";
+    message.textContent = "No current service alerts.";
+    container.appendChild(message);
+
+    if (checkedAt) {
+      const stamp = document.createElement("p");
+      stamp.className = "alert-checked";
+      stamp.textContent = `Last checked ${formatCheckedAt(checkedAt)}.`;
+      container.appendChild(stamp);
+    }
+
+    container.hidden = false;
+    return;
+  }
+
+  container.classList.remove("is-empty");
 
   // Build nodes with textContent so feed text can never inject markup.
   alerts.forEach((alert) => {
@@ -208,7 +239,8 @@ async function initAlerts() {
   const container = document.querySelector("#alerts");
   if (!container) return;
   try {
-    renderAlerts(await loadAlerts(), container);
+    const { alerts, error } = await loadAlerts();
+    renderAlerts(alerts, container, { checkedAt: new Date(), error });
   } catch (error) {
     // Alerts are supplementary; never let a failure here break the schedule.
     console.error("Could not load service alerts", error);

@@ -143,6 +143,28 @@ td.now {
   color: var(--soon);
 }
 
+/* All-clear state: calm/positive rather than a warning. */
+.alerts.is-empty {
+  background: #f1f7f3;
+  border-color: #cfe3d6;
+  border-left-color: var(--accent);
+}
+
+.alerts.is-empty h2 {
+  color: var(--accent);
+}
+
+.alert-none {
+  margin: 0;
+  font-weight: 600;
+}
+
+.alert-checked {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
 .alert {
   display: grid;
   gap: 0.15rem;
