@@ -44,13 +44,41 @@ async function loadDotEnv(filePath) {
   }
 }
 
-// Recursively sort object keys for stable output. Arrays keep their order,
-// since schedule sequence is meaningful.
+// The 511 API regularly drops or stalls connections, especially from
+// datacenter IPs (e.g. GitHub runners). Retry a few times with backoff and a
+// per-attempt timeout, and surface the underlying cause when fetch() throws.
+async function fetchWithRetry(url, { attempts = 4, timeoutMs = 20000 } = {}) {
+  let lastError;
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      return await fetch(url, { signal: AbortSignal.timeout(timeoutMs) });
+    } catch (error) {
+      lastError = error;
+      const cause = error.cause ? ` (cause: ${error.cause.code || error.cause.message})` : "";
+      console.error(`Attempt ${attempt}/${attempts} failed: ${error.message}${cause}`);
+      if (attempt < attempts) {
+        const delayMs = 1000 * 2 ** (attempt - 1); // 1s, 2s, 4s
+        await new Promise((resolve) => setTimeout(resolve, delayMs));
+      }
+    }
+  }
+  throw lastError;
+}
+
+// Keys to drop: 511 regenerates these internal record IDs/refs on most
+// fetches even when the schedule is unchanged, which would churn the file (and
+// trigger deploys) for no real change. The app reads schedules positionally
+// from Call arrays and never uses these, so dropping them is safe.
+const VOLATILE_KEYS = new Set(["id", "ref"]);
+
+// Recursively sort object keys for stable output and drop volatile keys.
+// Arrays keep their order, since schedule sequence is meaningful.
 function canonicalize(value) {
   if (Array.isArray(value)) return value.map(canonicalize);
   if (value && typeof value === "object") {
     return Object.fromEntries(
       Object.keys(value)
+        .filter((key) => !VOLATILE_KEYS.has(key))
         .sort()
         .map((key) => [key, canonicalize(value[key])]),
     );
@@ -73,7 +101,7 @@ async function main() {
   url.searchParams.set("operator_id", "GF");
   url.searchParams.set("line_id", "LSSF");
 
-  const response = await fetch(url);
+  const response = await fetchWithRetry(url);
   if (!response.ok) {
     const body = await response.text();
     throw new Error(`511 request failed (${response.status}): ${body.slice(0, 400)}`);
