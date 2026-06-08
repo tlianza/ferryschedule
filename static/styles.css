@@ -154,11 +154,6 @@ td.now {
   color: var(--accent);
 }
 
-.alert-none {
-  margin: 0;
-  font-weight: 600;
-}
-
 .alert-checked {
   margin: 0;
   font-size: 0.78rem;

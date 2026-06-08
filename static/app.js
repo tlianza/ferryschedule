@@ -165,19 +165,24 @@ async function inferDirectionFromLocation() {
 
 async function loadAlerts() {
   const response = await fetch("/data/alerts.json");
-  if (!response.ok) return { alerts: [], error: `http_${response.status}` };
+  if (!response.ok) return { alerts: [], error: `http_${response.status}`, feedTimestamp: null };
   const data = await response.json();
   return {
     alerts: Array.isArray(data.alerts) ? data.alerts : [],
     error: data.error || null,
+    feedTimestamp: data.feedTimestamp ?? null,
   };
 }
 
-function formatCheckedAt(date) {
-  return date.toLocaleString([], { dateStyle: "medium", timeStyle: "short" });
+// feedTimestamp is the 511 feed's publish time (POSIX seconds).
+function formatCheckedAt(feedTimestamp) {
+  return new Date(feedTimestamp * 1000).toLocaleString([], {
+    dateStyle: "medium",
+    timeStyle: "short",
+  });
 }
 
-function renderAlerts(alerts, container, { checkedAt, error } = {}) {
+function renderAlerts(alerts, container, { feedTimestamp, error } = {}) {
   container.innerHTML = "";
 
   // Couldn't actually reach the feed: stay quiet rather than imply all-clear.
@@ -188,21 +193,17 @@ function renderAlerts(alerts, container, { checkedAt, error } = {}) {
   }
 
   const heading = document.createElement("h2");
-  heading.textContent = alerts.length === 1 ? "Service Alert" : "Service Alerts";
   container.appendChild(heading);
 
   if (!alerts.length) {
-    // All-clear: reassure the user and show when we last checked.
+    // All-clear: say so in the title, with just the last-checked time below.
     container.classList.add("is-empty");
-    const message = document.createElement("p");
-    message.className = "alert-none";
-    message.textContent = "No current service alerts.";
-    container.appendChild(message);
+    heading.textContent = "Service Alerts: None";
 
-    if (checkedAt) {
+    if (feedTimestamp) {
       const stamp = document.createElement("p");
       stamp.className = "alert-checked";
-      stamp.textContent = `Last checked ${formatCheckedAt(checkedAt)}.`;
+      stamp.textContent = `Last checked ${formatCheckedAt(feedTimestamp)}.`;
       container.appendChild(stamp);
     }
 
@@ -211,6 +212,7 @@ function renderAlerts(alerts, container, { checkedAt, error } = {}) {
   }
 
   container.classList.remove("is-empty");
+  heading.textContent = alerts.length === 1 ? "Service Alert" : "Service Alerts";
 
   // Build nodes with textContent so feed text can never inject markup.
   alerts.forEach((alert) => {
@@ -239,8 +241,8 @@ async function initAlerts() {
   const container = document.querySelector("#alerts");
   if (!container) return;
   try {
-    const { alerts, error } = await loadAlerts();
-    renderAlerts(alerts, container, { checkedAt: new Date(), error });
+    const { alerts, error, feedTimestamp } = await loadAlerts();
+    renderAlerts(alerts, container, { feedTimestamp, error });
   } catch (error) {
     // Alerts are supplementary; never let a failure here break the schedule.
     console.error("Could not load service alerts", error);
