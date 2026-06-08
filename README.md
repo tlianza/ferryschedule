@@ -2,6 +2,8 @@
 
 Fresh static site implementation for the Larkspur <-> San Francisco ferry schedule.
 
+Live at https://larkspurferry.com
+
 ## Stack
 
 - Static assets in `static/` (HTML/CSS/JS)
