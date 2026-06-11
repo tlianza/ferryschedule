@@ -9,18 +9,18 @@
       "dayTypes": {
         "DayType": [
           {
-            "Name": "Weekday",
-            "properties": {
-              "PropertyOfDay": {
-                "DaysOfWeek": "Monday Tuesday Wednesday Thursday Friday "
-              }
-            }
-          },
-          {
             "Name": "Weekend",
             "properties": {
               "PropertyOfDay": {
                 "DaysOfWeek": "Saturday Sunday "
+              }
+            }
+          },
+          {
+            "Name": "Weekday",
+            "properties": {
+              "PropertyOfDay": {
+                "DaysOfWeek": "Monday Tuesday Wednesday Thursday Friday "
               }
             }
           }
