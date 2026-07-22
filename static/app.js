@@ -37,6 +37,12 @@ function defaultTimetableName(lineId, scheduleName, direction = "S") {
   return `${lineId}:${direction} :${scheduleName}`;
 }
 
+// Before noon riders are mostly heading into SF (Southbound); after noon,
+// home to Larkspur (Northbound). Instant, so it paints without waiting on geo.
+function defaultDirectionForNow() {
+  return new Date().getHours() < 12 ? "S" : "N";
+}
+
 function isTodaySchedule(name, lineId, scheduleName) {
   return (
     name === defaultTimetableName(lineId, scheduleName, "N") ||
@@ -139,7 +145,7 @@ function renderRows(timetable, tbody, highlightNow) {
 }
 
 async function inferDirectionFromLocation() {
-  if (!navigator.geolocation) return "S";
+  if (!navigator.geolocation) return null;
   return new Promise((resolve) => {
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -157,7 +163,8 @@ async function inferDirectionFromLocation() {
         );
         resolve(nDistance < sDistance ? "N" : "S");
       },
-      () => resolve("S"),
+      // Couldn't get a fix: leave the time-of-day default in place.
+      () => resolve(null),
       { timeout: 3000 },
     );
   });
@@ -270,8 +277,6 @@ async function boot() {
     const lineId = timetables[0].lineId;
     const availableSchedules = new Set(timetables.map((timetable) => timetable.schedule));
     const todaySchedule = scheduleNameForToday(availableSchedules);
-    const defaultDirection = await inferDirectionFromLocation();
-    const defaultName = defaultTimetableName(lineId, todaySchedule, defaultDirection);
 
     timetables.forEach((timetable) => {
       const option = document.createElement("option");
@@ -281,7 +286,13 @@ async function boot() {
     });
 
     const tableByName = new Map(timetables.map((t) => [t.name, t]));
-    select.value = tableByName.has(defaultName) ? defaultName : timetables[0]?.name;
+    const nameForDirection = (direction) => {
+      const name = defaultTimetableName(lineId, todaySchedule, direction);
+      return tableByName.has(name) ? name : timetables[0]?.name;
+    };
+
+    // Paint straight away with a time-of-day guess; geolocation refines it below.
+    select.value = nameForDirection(defaultDirectionForNow());
 
     const paint = () => {
       const active = tableByName.get(select.value);
@@ -296,8 +307,23 @@ async function boot() {
       status.textContent = "";
     };
 
-    select.addEventListener("change", paint);
+    let userChose = false;
+    select.addEventListener("change", () => {
+      userChose = true;
+      paint();
+    });
     paint();
+
+    // Refine the default direction from location without blocking first paint.
+    // Skip if the visitor has already picked a tab themselves.
+    inferDirectionFromLocation().then((direction) => {
+      if (userChose || !direction) return;
+      const name = nameForDirection(direction);
+      if (select.value !== name) {
+        select.value = name;
+        paint();
+      }
+    });
   } catch (error) {
     status.textContent = "Could not load schedule data. Please refresh.";
     console.error(error);
