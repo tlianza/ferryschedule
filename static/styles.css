@@ -81,6 +81,11 @@ label {
   animation: geo-pulse 1.4s ease-in-out infinite;
 }
 
+/* The display rule above would otherwise override the hidden attribute. */
+.geo-indicator[hidden] {
+  display: none;
+}
+
 @keyframes geo-pulse {
   0%,
   100% {
