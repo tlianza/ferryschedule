@@ -316,14 +316,20 @@ async function boot() {
 
     // Refine the default direction from location without blocking first paint.
     // Skip if the visitor has already picked a tab themselves.
-    inferDirectionFromLocation().then((direction) => {
-      if (userChose || !direction) return;
-      const name = nameForDirection(direction);
-      if (select.value !== name) {
-        select.value = name;
-        paint();
-      }
-    });
+    const geoIndicator = document.querySelector("#geo-indicator");
+    if (navigator.geolocation && geoIndicator) geoIndicator.hidden = false;
+    inferDirectionFromLocation()
+      .then((direction) => {
+        if (userChose || !direction) return;
+        const name = nameForDirection(direction);
+        if (select.value !== name) {
+          select.value = name;
+          paint();
+        }
+      })
+      .finally(() => {
+        if (geoIndicator) geoIndicator.hidden = true;
+      });
   } catch (error) {
     status.textContent = "Could not load schedule data. Please refresh.";
     console.error(error);
