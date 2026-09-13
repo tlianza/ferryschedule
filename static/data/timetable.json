@@ -68,8 +68,8 @@
         "Name": "LSSF:N :Weekend",
         "frameValidityConditions": {
           "AvailabilityCondition": {
-            "FromDate": "2026-06-14T00:00:00-07:00",
-            "ToDate": "2026-09-12T23:59:00-07:00",
+            "FromDate": "2026-09-13T00:00:00-07:00",
+            "ToDate": "2026-12-12T23:59:00-07:00",
             "dayTypes": {
               "DayTypeRef": {}
             }
@@ -82,7 +82,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456120",
+              "SiriVehicleJourneyRef": "9508127",
               "calls": {
                 "Call": [
                   {
@@ -123,7 +123,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456121",
+              "SiriVehicleJourneyRef": "9508128",
               "calls": {
                 "Call": [
                   {
@@ -164,7 +164,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456122",
+              "SiriVehicleJourneyRef": "9508129",
               "calls": {
                 "Call": [
                   {
@@ -205,7 +205,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456123",
+              "SiriVehicleJourneyRef": "9508130",
               "calls": {
                 "Call": [
                   {
@@ -246,7 +246,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456124",
+              "SiriVehicleJourneyRef": "9508131",
               "calls": {
                 "Call": [
                   {
@@ -287,7 +287,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456125",
+              "SiriVehicleJourneyRef": "9508132",
               "calls": {
                 "Call": [
                   {
@@ -328,7 +328,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456126",
+              "SiriVehicleJourneyRef": "9508133",
               "calls": {
                 "Call": [
                   {
@@ -369,7 +369,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456127",
+              "SiriVehicleJourneyRef": "9508134",
               "calls": {
                 "Call": [
                   {
@@ -412,8 +412,8 @@
         "Name": "LSSF:S :Weekend",
         "frameValidityConditions": {
           "AvailabilityCondition": {
-            "FromDate": "2026-06-14T00:00:00-07:00",
-            "ToDate": "2026-09-12T23:59:00-07:00",
+            "FromDate": "2026-09-13T00:00:00-07:00",
+            "ToDate": "2026-12-12T23:59:00-07:00",
             "dayTypes": {
               "DayTypeRef": {}
             }
@@ -426,7 +426,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456113",
+              "SiriVehicleJourneyRef": "9508120",
               "calls": {
                 "Call": [
                   {
@@ -467,7 +467,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456114",
+              "SiriVehicleJourneyRef": "9508121",
               "calls": {
                 "Call": [
                   {
@@ -508,7 +508,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456116",
+              "SiriVehicleJourneyRef": "9508123",
               "calls": {
                 "Call": [
                   {
@@ -549,7 +549,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456117",
+              "SiriVehicleJourneyRef": "9508124",
               "calls": {
                 "Call": [
                   {
@@ -590,7 +590,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456118",
+              "SiriVehicleJourneyRef": "9508125",
               "calls": {
                 "Call": [
                   {
@@ -631,7 +631,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456115",
+              "SiriVehicleJourneyRef": "9508122",
               "calls": {
                 "Call": [
                   {
@@ -672,7 +672,7 @@
                 "DirectionRef": {},
                 "RouteRef": {}
               },
-              "SiriVehicleJourneyRef": "9456119",
+              "SiriVehicleJourneyRef": "9508126",
               "calls": {
                 "Call": [
                   {
